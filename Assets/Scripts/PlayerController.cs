@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     private int desiredLane = 1;
     public float laneDistance = 4;
+    public float jumpForce;
+    public float Gravity = -20;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -21,6 +24,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         direction.z = forwardSpeed;
+        direction.y += Gravity * Time.deltaTime;
+        
+        if (controller.isGrounded)
+        {
+            
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Jump();
+            }
+        }
+        
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             desiredLane++;
@@ -52,5 +66,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         controller.Move(direction*Time.fixedDeltaTime);
+    }
+
+    private void Jump()
+    {
+        direction.y = jumpForce;
     }
 }
