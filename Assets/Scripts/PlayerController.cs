@@ -60,7 +60,9 @@ public class PlayerController : MonoBehaviour
             targetPosition += Vector3.right * laneDistance;
         }
 
-        transform.position = targetPosition;
+        transform.position = Vector3.Lerp(transform.position, targetPosition, 70 * Time.deltaTime);
+        //transform.position = targetPosition;
+        controller.center = controller.center; 
     }
 
     private void FixedUpdate()
