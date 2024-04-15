@@ -29,20 +29,20 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (ControlManager.SwipeUp)
             {
                 Jump();
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (ControlManager.swipeRight)
         {
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
 
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (ControlManager.swipeLeft)
         {
             desiredLane--;
             if (desiredLane == -1)
