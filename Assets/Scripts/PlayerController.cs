@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
        
 
     private int desiredLane = 1;
-    public float laneDistance = 4;
+    public float laneDistance = 2.5f;
     public float jumpForce;
-    public float Gravity = -20;
+    public float Gravity = -12f;
 
     void Start()
     {
@@ -30,26 +30,21 @@ public class PlayerController : MonoBehaviour
 
         if (controller.isGrounded)
         {
-            if (Input.GetKey(KeyCode.W))
-            {
+            if (ControlManager.SwipeUp)
                 Jump();
-            }
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (ControlManager.swipeRight)
         {
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
-
         }
-
-        if (Input.GetKey(KeyCode.A))
+        if (ControlManager.swipeLeft)
         {
             desiredLane--;
             if (desiredLane == -1)
                 desiredLane = 0;
-
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -97,7 +92,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-
+    
 
 }
