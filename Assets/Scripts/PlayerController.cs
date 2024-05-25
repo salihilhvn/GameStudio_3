@@ -3,18 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     private CharacterController controller;
     private Vector3 direction;
     public float forwardSpeed;
+       
 
     private int desiredLane = 1;
     public float laneDistance = 4;
     public float jumpForce;
     public float Gravity = -20;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -25,24 +27,24 @@ public class PlayerController : MonoBehaviour
     {
         direction.z = forwardSpeed;
         direction.y += Gravity * Time.deltaTime;
-        
+
         if (controller.isGrounded)
         {
-            
-            if (ControlManager.SwipeUp)
+            if (Input.GetKey(KeyCode.W))
             {
                 Jump();
             }
         }
-        
-        if (ControlManager.swipeRight)
+
+        if (Input.GetKey(KeyCode.D))
         {
             desiredLane++;
             if (desiredLane == 3)
                 desiredLane = 2;
 
         }
-        if (ControlManager.swipeLeft)
+
+        if (Input.GetKey(KeyCode.A))
         {
             desiredLane--;
             if (desiredLane == -1)
@@ -55,7 +57,8 @@ public class PlayerController : MonoBehaviour
         if (desiredLane == 0)
         {
             targetPosition += Vector3.left * laneDistance;
-        }else if (desiredLane == 2)
+        }
+        else if (desiredLane == 2)
         {
             targetPosition += Vector3.right * laneDistance;
         }
@@ -73,12 +76,12 @@ public class PlayerController : MonoBehaviour
         else
             controller.Move(diff);
     }
-    
-    
+
+
 
     private void FixedUpdate()
     {
-        controller.Move(direction*Time.fixedDeltaTime);
+        controller.Move(direction * Time.fixedDeltaTime);
     }
 
     private void Jump()
@@ -86,12 +89,15 @@ public class PlayerController : MonoBehaviour
         direction.y = jumpForce;
     }
 
-   private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.transform.tag == "Obstacle")
         {
             PlayerManager.gameOver = true;
         }
-            
+
     }
+
+
+
 }
