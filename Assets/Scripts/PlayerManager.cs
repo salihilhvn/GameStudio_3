@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     {
         gameOver = false;
         numberOfCoins = 0;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
