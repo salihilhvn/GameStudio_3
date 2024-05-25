@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
     public static bool gameOver;
     public static int numberOfCoins;
-
+    public Text coinText;
     public GameObject gameOverPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,11 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = 0;
-        gameOverPanel.SetActive(true);
+        if (gameOver)
+        {
+            Time.timeScale = 0;
+            gameOverPanel.SetActive(true);
+        }
+        coinText.text = "Coins: " + numberOfCoins;
     }
 }
