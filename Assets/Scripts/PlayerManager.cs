@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public static bool gameOver;
+    public static int numberOfCoins;
 
     public GameObject gameOverPanel;
     // Start is called before the first frame update
     void Start()
     {
         gameOver = false;
+        numberOfCoins = 0;
     }
 
     // Update is called once per frame
