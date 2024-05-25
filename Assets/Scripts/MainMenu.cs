@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject mainMenuPanel;
+    public GameObject optionsMenuPanel;
+
+    private void Start()
+    {
+        mainMenuPanel.SetActive(true);
+        optionsMenuPanel.SetActive(false);
+    }
+
     public void PlayGame()
     {
         // Replace "YourSceneName" with the name of your game scene
@@ -20,7 +30,14 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptions()
     {
-        // Implement your options menu logic here
+        mainMenuPanel.SetActive(false);
+        optionsMenuPanel.SetActive(true);
         Debug.Log("Options");
+    }
+
+    public void CloseOptions()
+    {
+        mainMenuPanel.SetActive(true);
+        optionsMenuPanel.SetActive(false);
     }
 }
