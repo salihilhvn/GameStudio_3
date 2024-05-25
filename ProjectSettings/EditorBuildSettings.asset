@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level_1.unity
-    guid: db7811f8b00ed7a4da45632aa6a66472
+    path: Assets/Scenes/Hippodrome.unity
+    guid: 630ef2537a37790428e18df1a8481987
   - enabled: 1
-    path: Assets/Scenes/Level_2.unity
-    guid: f218f6b72b513d04d973c91fe20fddca
+    path: Assets/Scenes/Colesium.unity
+    guid: d19513eef15ff1642b367070aaa3ae8b
+  - enabled: 1
+    path: Assets/Scenes/Battlefield.unity
+    guid: c6383bb728597344397e339e6b083430
   m_configObjects: {}
