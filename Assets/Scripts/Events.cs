@@ -7,12 +7,16 @@ public class Events : MonoBehaviour
 {
     public void ReplayGame()
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex , 0);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()
     {
         Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
         Debug.Log("Quit!");
     }
 }

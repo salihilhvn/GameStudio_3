@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     public float laneDistance = 2.5f;
     public float jumpForce;
     public float Gravity = -12f;
+    private Animator anim;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Start()
     {
