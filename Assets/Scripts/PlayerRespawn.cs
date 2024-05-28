@@ -40,13 +40,13 @@ public class PlayerRespawn : MonoBehaviour
         //playerHealth.Respawn();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.tag == "Checkpoint")
         {
             currentCheckpoint = collision.transform;
             //SoundManager.instance.PlaySound(checkpointSound);
-            collision.GetComponent<Collider2D>().enabled = false;
+            collision.GetComponent<Collider>().enabled = false;
             collision.GetComponent<Animator>().SetTrigger("appear");
         }
         else if (collision.transform.tag == "NextLevel")
