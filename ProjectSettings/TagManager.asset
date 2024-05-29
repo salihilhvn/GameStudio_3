@@ -8,6 +8,8 @@ TagManager:
   - NextLevel
   - Coin
   - Enemy
+  - Ground
+  - Shit
   layers:
   - Default
   - TransparentFX
