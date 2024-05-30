@@ -1,32 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CloudMover : MonoBehaviour
 {
     public float speed = 50f; // Speed at which the cloud moves
+    public Vector2 startPosition = new Vector2(-100, 0); // Starting position of the cloud
+    public Vector2 endPosition = new Vector2(100, 0); // Ending position of the cloud
+    public bool moveLeftToRight = true; // Direction of movement
+
     private RectTransform rectTransform;
-    private float screenWidth;
-    private float initialYPosition;
 
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        screenWidth = Screen.width;
-        initialYPosition = rectTransform.anchoredPosition.y; // Store the initial vertical position
+        rectTransform.anchoredPosition = startPosition; // Set the initial position to startPosition
     }
 
     void Update()
     {
-        // Move the cloud to the right
-        rectTransform.anchoredPosition += Vector2.right * speed * Time.deltaTime;
+        // Determine the direction of movement
+        Vector2 movement = (moveLeftToRight ? Vector2.right : Vector2.left) * speed * Time.deltaTime;
 
-        // Check if the cloud has moved past the right edge of the screen
-        if (rectTransform.anchoredPosition.x - rectTransform.rect.width / 2 > screenWidth)
+        // Move the cloud in the specified direction
+        rectTransform.anchoredPosition += movement;
+
+        // Check if the cloud has moved past the end position
+        if (moveLeftToRight)
         {
-            // Move the cloud to the left edge of the screen at the initial vertical position
-            rectTransform.anchoredPosition = new Vector2(-rectTransform.rect.width / 2, initialYPosition);
+            if (rectTransform.anchoredPosition.x >= endPosition.x)
+            {
+                // Move the cloud to the start position
+                rectTransform.anchoredPosition = new Vector2(startPosition.x, rectTransform.anchoredPosition.y);
+            }
+        }
+        else
+        {
+            if (rectTransform.anchoredPosition.x <= endPosition.x)
+            {
+                // Move the cloud to the start position
+                rectTransform.anchoredPosition = new Vector2(startPosition.x, rectTransform.anchoredPosition.y);
+            }
         }
     }
 }
