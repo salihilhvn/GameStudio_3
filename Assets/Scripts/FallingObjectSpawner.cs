@@ -38,5 +38,4 @@ public class FallingObjectSpawner : MonoBehaviour
         // Bir sonraki obje için Z koordinatını güncelle
         currentZ += zOffset;
     }
-    
 }
