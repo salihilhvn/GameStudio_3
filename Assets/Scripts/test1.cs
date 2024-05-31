@@ -14,6 +14,8 @@ public class test1 : MonoBehaviour
     private bool isJumping = false;
     public bool isGamePaused = false; // Flag to track if the game is paused
 
+    public GameObject deathPanel;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -61,8 +63,9 @@ public class test1 : MonoBehaviour
         // Check if we collided with an enemy
         if (collision.gameObject.CompareTag("Shit"))
         {
-            Debug.Log("You lose!"); // Print a debug message
+            Debug.Log("You lose!");
             PauseGame(); // Pause the game
+            deathPanel.SetActive(true);
         }
     }
 
