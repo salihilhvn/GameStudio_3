@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerManager.gameOver = true;
         }
-
+        
     }
     
 
