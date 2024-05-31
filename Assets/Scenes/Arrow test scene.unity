@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -266,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -336,7 +336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -406,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -454,11 +454,6 @@ Rigidbody:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1440646129277541425, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
   m_PrefabInstance: {fileID: 1701268629}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &995566546 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
-  m_PrefabInstance: {fileID: 2452175363653164676}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &995566547 stripped
 Transform:
@@ -528,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -598,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -760,7 +755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -866,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -936,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
@@ -1089,10 +1084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532363c965784014582adc34460d6246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
+  attackCooldown: 2
   firePoint: {fileID: 1591519446}
-  arrows:
-  - {fileID: 995566546}
+  arrowPrefab: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
 --- !u!65 &2080990369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1500,7 +1494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780580642532181643, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135308344219088330, guid: 4251e87a549134e43a2b221921f02fef, type: 3}
       propertyPath: resetTime
