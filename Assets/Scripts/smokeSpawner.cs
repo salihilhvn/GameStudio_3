@@ -10,7 +10,7 @@ public class smokeSpawner : MonoBehaviour
 
     public float spawnInterval = 2.0f; // Oluþturma aralýðý
 
-    private float timer = 0.0f;
+    public float timer = 0.0f;
 
     void Update()
     {

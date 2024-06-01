@@ -3739,6 +3739,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 154379757}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &154379757
 Transform:
   m_ObjectHideFlags: 0
@@ -9475,6 +9476,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 2496788584015434769, guid: bc23747ae732a0a42b3ec37adf40042a, type: 3}
   spawnPoint: {fileID: 475048125}
   spawnInterval: 1.1
+  timer: 1.1
 --- !u!4 &475048125
 Transform:
   m_ObjectHideFlags: 0
@@ -9766,6 +9768,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 2496788584015434769, guid: bc23747ae732a0a42b3ec37adf40042a, type: 3}
   spawnPoint: {fileID: 494721400}
   spawnInterval: 1.1
+  timer: 1.1
 --- !u!4 &494721400
 Transform:
   m_ObjectHideFlags: 0
@@ -10859,6 +10862,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 541440337}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &541440337
 Transform:
   m_ObjectHideFlags: 0
@@ -16301,6 +16305,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 816259669}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &816259669
 Transform:
   m_ObjectHideFlags: 0
@@ -25562,6 +25567,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 1261297011}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &1261297011
 Transform:
   m_ObjectHideFlags: 0
@@ -28658,6 +28664,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 2496788584015434769, guid: bc23747ae732a0a42b3ec37adf40042a, type: 3}
   spawnPoint: {fileID: 1391625836}
   spawnInterval: 1.1
+  timer: 1.1
 --- !u!4 &1391625836
 Transform:
   m_ObjectHideFlags: 0
@@ -36105,6 +36112,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 1790981708}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &1790981708
 Transform:
   m_ObjectHideFlags: 0
@@ -41518,6 +41526,7 @@ MonoBehaviour:
   smokePrefab: {fileID: 3584587791213775, guid: 809c024995a94254dbb2232d4c710a8d, type: 3}
   spawnPoint: {fileID: 2017144562}
   spawnInterval: 2
+  timer: 2
 --- !u!4 &2017144562
 Transform:
   m_ObjectHideFlags: 0
