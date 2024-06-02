@@ -4,9 +4,8 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public GameObject pauseMenuPanel; // Panel referansı
-
+    public GameObject SettingsMenuPanel;
     private bool isPaused = false;
-    public GameObject settingsPanel;
 
     void Update()
     {
@@ -28,7 +27,7 @@ public class UIManager : MonoBehaviour
     public void PauseGame()
     {
         pauseMenuPanel.SetActive(true);
-        Time.timeScale = 0f; 
+        Time.timeScale = 0f; // Oyunu duraklatır
         isPaused = true;
     }
 
@@ -36,37 +35,35 @@ public class UIManager : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenuPanel.SetActive(false);
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f; // Oyunu devam ettirir
         isPaused = false;
     }
 
     // Başlangıç sahnesini yükler
     public void LoadStartScene()
     {
-        Time.timeScale = 1f; 
-        SceneManager.LoadScene("StartScene"); 
+        Time.timeScale = 1f; // Zamanı normal hızına döndür
+        SceneManager.LoadScene("StartScene"); // StartScene ismini kendi sahne isminizle değiştirin
     }
 
     // Oyun sahnesini yükler
     public void LoadGameScene()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("GameScene"); 
+        Time.timeScale = 1f; // Zamanı normal hızına döndür
+        SceneManager.LoadScene("GameScene"); // GameScene ismini kendi sahne isminizle değiştirin
     }
 
     // Ayarlar sahnesini yükler
     public void LoadSettingsScene()
     {
-        //Time.timeScale = 1f; // Zamanı normal hızına döndür
-        //SceneManager.LoadScene("SettingsScene"); 
-        settingsPanel.SetActive(true);
-        
+        Time.timeScale = 1f; // Zamanı normal hızına döndür
+        SettingsMenuPanel.SetActive(true);
     }
 
- 
+    // Oyunu yeniden başlatır (şu anki sahneyi yeniden yükler)
     public void RetryGame()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f; // Zamanı normal hızına döndür
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
     }
@@ -74,8 +71,8 @@ public class UIManager : MonoBehaviour
     // Ana menü sahnesini yükler
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f; 
-        SceneManager.LoadScene(0); 
+        Time.timeScale = 1f; // Zamanı normal hızına döndür
+        SceneManager.LoadScene(0); // MainMenu ismini kendi sahne isminizle değiştirin
     }
 
     // Oyunu kapatır
