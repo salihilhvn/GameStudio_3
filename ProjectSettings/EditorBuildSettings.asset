@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/Yi\u011Fit.unity"
     guid: 630ef2537a37790428e18df1a8481987
   - enabled: 1
+    path: Assets/Scenes/Level_Battlefield.unity
+    guid: b9d195ff187e28c47ba3f2f58e027799
+  - enabled: 1
     path: Assets/Scenes/kaan.unity
     guid: e53d2f634e4a8d744909de5df3ebe0d7
   m_configObjects: {}
