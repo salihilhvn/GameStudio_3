@@ -5,15 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: ee71d3d5183a8ca40b7da59df5f37c72
+  - enabled: 1
     path: "Assets/Scenes/Yi\u011Fit.unity"
     guid: 630ef2537a37790428e18df1a8481987
-  - enabled: 0
-    path: Assets/Scenes/Colesium.unity
-    guid: d19513eef15ff1642b367070aaa3ae8b
-  - enabled: 0
-    path: Assets/Scenes/Battlefield.unity
-    guid: c6383bb728597344397e339e6b083430
   - enabled: 1
     path: Assets/Scenes/kaan.unity
     guid: e53d2f634e4a8d744909de5df3ebe0d7
