@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Sahne yönetimi için gerekli
 
 
 public class portalCodes : MonoBehaviour
@@ -17,11 +16,15 @@ public class portalCodes : MonoBehaviour
 
 
 
+
     void Start()
     {
        Invoke("DeactivateObject", deactivateDelay);
         initialPosition = transform.position;
+
+      
     }
+   
 
     void Update()
     {
@@ -33,7 +36,7 @@ public class portalCodes : MonoBehaviour
     {
        
         SetActived();
-
+      
 
     }
 

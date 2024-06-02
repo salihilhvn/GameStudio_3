@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: "Assets/Scenes/Yi\u011Fit.unity"
     guid: 630ef2537a37790428e18df1a8481987
   - enabled: 1
+    path: Assets/Scenes/Level_Hipodrome.unity
+    guid: 0ce0cd0089654cb488ab8d018dde9ecf
+  - enabled: 1
+    path: Assets/Scenes/Collesium.unity
+    guid: 387240086b68e8f45989a0df1c0e1f9c
+  - enabled: 1
     path: Assets/Scenes/Level_Battlefield.unity
     guid: b9d195ff187e28c47ba3f2f58e027799
   - enabled: 1
