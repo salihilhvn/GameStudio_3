@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         // Replace "YourSceneName" with the name of your game scene
-        SceneManager.LoadScene("Hippodrome");
+        SceneManager.LoadScene(2);
         Debug.Log("Level 1 Loading");
     }
 

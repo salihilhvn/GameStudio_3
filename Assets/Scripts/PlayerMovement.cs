@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class test1 : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class PlayerMovement : MonoBehaviour
 {
     public float laneDistance = 2.0f; // The distance between the lanes
     public float jumpForce = 10.0f;   // The force applied when jumping
@@ -75,4 +75,13 @@ public class test1 : MonoBehaviour
         Time.timeScale = 0f; // Set the time scale to zero to freeze the game
         isGamePaused = true; // Set the game pause flag
     }
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.tag == "Obstacle")
+        {
+            PlayerManager.gameOver = true;
+        }
+        
+    }
+
 }
