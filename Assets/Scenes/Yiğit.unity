@@ -1568,6 +1568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
+    - target: {fileID: 6869714302985678465, guid: eb548dfb04c18904080cc072c35dc9e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1645,6 +1649,10 @@ PrefabInstance:
     - target: {fileID: 1400179022394323417, guid: 673fb349d45c99b438c4f4c6fe1f9c1c, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400179022394323417, guid: 673fb349d45c99b438c4f4c6fe1f9c1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2976004805486607128, guid: 673fb349d45c99b438c4f4c6fe1f9c1c, type: 3}
       propertyPath: m_Pivot.x
@@ -1746,6 +1754,10 @@ PrefabInstance:
     - target: {fileID: 2717284296258323930, guid: 76c8739a06b09dc4cb6d3768f41cbfb6, type: 3}
       propertyPath: m_Name
       value: UICanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717284296258323930, guid: 76c8739a06b09dc4cb6d3768f41cbfb6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5034721968095185734, guid: 76c8739a06b09dc4cb6d3768f41cbfb6, type: 3}
       propertyPath: m_Pivot.x

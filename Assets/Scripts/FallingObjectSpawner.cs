@@ -8,6 +8,7 @@ public class FallingObjectSpawner : MonoBehaviour
     public float spawnRangeX = 10.0f; // Objelerin yatayda spawn olacağı aralık
     public float zOffset = 5.0f; // Her yeni objenin Z ekseninde ne kadar ileride spawn olacağı
     private float currentZ; // Son oluşturulan objenin Z koordinatı
+    [SerializeField] protected float damage;
 
     private void Start()
     {
@@ -37,5 +38,10 @@ public class FallingObjectSpawner : MonoBehaviour
 
         // Bir sonraki obje için Z koordinatını güncelle
         currentZ += zOffset;
+    }
+    protected void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "Player")
+            collision.GetComponent<Health>().TakeDamage(damage);
     }
 }
