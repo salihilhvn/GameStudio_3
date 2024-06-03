@@ -83,5 +83,13 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
+        private void OnTriggerEnter(Collider other)
+        {
+            // Eğer çarpışılan nesnenin tag'ı "shit" ise
+            if (other.CompareTag("Enemy"))
+            {
+                // Nesneyi yok et
+                Destroy(other.gameObject);
+            }
+        }
 }
