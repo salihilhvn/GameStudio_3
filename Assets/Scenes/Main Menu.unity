@@ -10277,6 +10277,10 @@ PrefabInstance:
       propertyPath: m_RaycastPadding.z
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1731000000460008191, guid: 7dd516c66ecd84645b1241fccc0daf46, type: 3}
+      propertyPath: playScene
+      value: Cutscene
+      objectReference: {fileID: 0}
     - target: {fileID: 4914346238573303489, guid: 7dd516c66ecd84645b1241fccc0daf46, type: 3}
       propertyPath: m_RaycastPadding.w
       value: 10
