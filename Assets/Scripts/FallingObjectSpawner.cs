@@ -39,9 +39,13 @@ public class FallingObjectSpawner : MonoBehaviour
         // Bir sonraki obje için Z koordinatını güncelle
         currentZ += zOffset;
     }
-    protected void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Player")
+        {
             collision.GetComponent<Health>().TakeDamage(damage);
+            Debug.Log("hasar");
+        }
     }
+    
 }

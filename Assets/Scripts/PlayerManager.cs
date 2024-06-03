@@ -6,26 +6,13 @@ using UnityEngine.UI;
 public class PlayerManager : MonoBehaviour
 {
     public static bool gameOver;
-    public static int numberOfCoins;
-    public Text coinText;
     public GameObject gameOverPanel;
     
     // Start is called before the first frame update
     void Start()
     {
         gameOver = false;
-        numberOfCoins = 0;
         Time.timeScale = 1;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameOver)
-        {
-            Time.timeScale = 0;
-            gameOverPanel.SetActive(true);
-        }
-        coinText.text = "Coins: " + numberOfCoins;
-    }
+    
 }
