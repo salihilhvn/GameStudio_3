@@ -83,5 +83,14 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            // Nesneyi yok et
+            Destroy(other.gameObject);
+        }
+    }
+
 
 }
