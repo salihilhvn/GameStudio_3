@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
-
+    public GameObject DeadPanel;
     private void Awake()
     {
         currentHealth = startingHealth;
@@ -29,6 +29,7 @@ public class Health : MonoBehaviour
                 anim.SetTrigger("die");
                 GetComponent<PlayerMovement>().enabled = false;
                 dead = true;
+                DeadPanel.SetActive(true);
             }
         }
     }
