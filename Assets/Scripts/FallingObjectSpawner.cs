@@ -9,10 +9,12 @@ public class FallingObjectSpawner : MonoBehaviour
     public float zOffset = 5.0f; // Her yeni objenin Z ekseninde ne kadar ileride spawn olacağı
     private float currentZ; // Son oluşturulan objenin Z koordinatı
     [SerializeField] protected float damage;
+    public Transform characterTransform; // Karakterin Transform bileşeni
+
 
     private void Start()
     {
-        currentZ = 0f; // Başlangıç Z koordinatı
+        currentZ = characterTransform.position.z;
         StartCoroutine(SpawnFallingObjects());
     }
 
@@ -37,7 +39,7 @@ public class FallingObjectSpawner : MonoBehaviour
         Instantiate(fallingObjectPrefab, spawnPosition, Quaternion.identity);
 
         // Bir sonraki obje için Z koordinatını güncelle
-        currentZ += zOffset;
+        currentZ = characterTransform.position.z + 19f;
     }
     private void OnTriggerEnter(Collider collision)
     {
